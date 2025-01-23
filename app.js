@@ -10,7 +10,9 @@ app.get('/', function (req, res) {
 })
 
 app.get('/ejs', function (req, res) {
-  res.render('words');
+  res.render('words', {
+    pageTitle: "my ejs page"
+  });
 })
 
 app.get('/helloRender', function (req, res) {
