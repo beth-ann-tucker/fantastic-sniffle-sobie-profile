@@ -3,6 +3,7 @@ require('dotenv').config()
 const app = express()
 const port = process.env.PORT || 3000;
 const bodyParser = require("body-parser")
+const {ObjectId} = require('mongodb');
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = process.env.MONGO_URI;
 
@@ -53,10 +54,45 @@ async function getData(){
 }
 
 app.get('/read', async function (req, res){
+
+
+
   let getDataResults = await getData();
   console.log(getDataResults);
   res.render('names', { nameData: getDataResults});
 })
+
+app.post('/insert', async function (req, res){
+
+  console.log('in /insert');
+
+  let newName = req.body.myName;
+
+  await client.connect();
+
+  await client.db("sobie-profile-database").collection("sobie-profile-data").insertOne({name: newName});
+
+  res.redirect('/read');
+})
+
+app.post('/delete/:id', async function (req, res){
+
+  console.log('in delete, req.parms.id: ', req.params.id);
+
+  client.connect();
+
+  const collection =  client.db("sobie-profile-database").collection("sobie-profile-data").insertOne({name: newName});
+
+  let result = await collection.findOneAndDelete(
+    {
+      "_id": new ObjectId(req.params.id)
+    }
+  ).then(result => );
+
+  res.redirect('/read');
+})
+
+
 
 getData();
 
@@ -88,6 +124,7 @@ app.get('/saveMyName', (req, res)=>{
 
   res.render('words', {pageTitle: reqName});
 })
+
 
 app.post('/saveMyName', (req, res)=>{
   console.log('Did we hit the post endpoint?');
