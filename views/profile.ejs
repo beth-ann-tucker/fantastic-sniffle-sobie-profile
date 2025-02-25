@@ -1,15 +1,72 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css'><link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
     Profile
-</body>
 
+    
 <main>
+  <div id="professionalDiv">
+    <div class="row" id="professionalRow1">
+      <div class="col-sm">
+        <div class="card" id="goalCard">
+          <div class="card-body">
+            <h4 class="card-title">Career Goals</h4>
+            <p class="card-text">My hope is to move to Chattanooga to pursue a career in IT auditing for a public
+              accounting firm. I also plan to get my CPA and eventually my CISA, CIA, and CITP.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div class="card" id="educationCard">
+          <div class="card-body">
+            <h4 class="card-title">Education</h4>
+            <p class="card-text">I am a junior at the University of North Alabama pursuing degrees in Accounting and
+              Computer Information Systems with a minor in Cybersecurity.</p>
+            <a href="https://www.linkedin.com/in/beth-ann-tucker/" target="_blank" class="card-link">LinkedIn</a>
+            <a href="Beth Ann Tucker Fall 2023 Resume.pdf" target="_blank" class="card-link">Resume</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" id="professionalRow2">
+      <div class="col-sm">
+        <div class="card" id="skillCard">
+          <div class="card-body">
+            <h4 class="card-title">Skills</h4>
+            <p class="card-text">Listed below are some of the skills I have developed over time. These skills are also
+              demonstrated through my projects in my gitHub.</p>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Python</td>
+                  <td>Java</td>
+                  <td>JavaScript</td>
+                  <td>R</td>
+                </tr>
+                <tr>
+                  <td>CSS</td>
+                  <td>HTML</td>
+                  <td>Bootstrap 5</td>
+                  <td>J Query</td>
+                </tr>
+              </tbody>
+            </table>
+            <a href="https://github.com/beth-ann-tucker/about-me-website/blob/main/README.md" target="_blank"
+              class="card-link">GitHub Bio</a>
+            <a href="https://github.com/beth-ann-tucker" target="_blank" class="card-link">Projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
     <form method="POST" action="insert/">
         <input name="title">
@@ -39,7 +96,13 @@
   
     </div>
       <% }); %>
-
 </main>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js'></script>
+    <script  src="./scripts/script.js"></script>
+</body>
 
 </html>
