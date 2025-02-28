@@ -1,0 +1,93 @@
+/*background*/
+body {
+    background-color: #9AAB89;
+    background-size: cover;
+  }
+  
+  h1 {
+    color: white;
+    font-size: 80px;
+    font-family: Stencil Std;
+    text-align: center;
+  }
+  /*card designs*/
+  
+  
+  #profileRow1{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+  }
+  
+  #picCard{
+    width: 60%;
+  }
+
+
+  #infoCard{
+    height: 100%;
+    width: 125%;
+    right: 200px;
+    text-align: center;
+  }
+  
+  #infoCard .card-title{
+    color: #9ABDDC;
+    font-size: 50px;
+    font-family: Stencil Std;
+    font-weight: bold;
+  }
+  
+  #infoCard .card-text{
+    color: black;
+    font-size: 15px;
+    font-family: Stencil Std;
+    word-wrap: normal;
+  }
+  
+  a{
+    color: #9ABDDC;
+    font-size: 30px;
+    font-family: Stencil Std;
+    bottom: 10px;
+  }
+
+  #addDiv,
+  #updateDeleteDiv {
+    padding: 30px;
+  }
+
+  #addDiv input{
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #9AAB89;
+  }
+
+  #updateDeleteDiv input{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 2px solid #9AAB89;
+  }
+
+  #addDiv .btn,
+  #updateDeleteDiv .btn{
+    background-color: #9AAB89;
+    color: white;
+    border: none;
+    height: 30px;
+  }
+
+  #updateDeleteDiv .btn{
+    float: right;
+    margin: 5px;
+  }
+
+  #add,
+  #delete,
+  #update {
+    font-size: 15px;
+    font-family: Stencil Std;
+  }
